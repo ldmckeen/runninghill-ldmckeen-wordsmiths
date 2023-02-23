@@ -12,7 +12,6 @@ Date:               February 2023
 ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
 ===========================================================================================
 """
-
 from django.contrib.auth.models import User
 from django.db import models
 from model_utils.models import TimeStampedModel
@@ -59,4 +58,3 @@ class Sentence(TimeStampedModel):
 
     text = models.CharField('English Sentence ', max_length=5000)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
-

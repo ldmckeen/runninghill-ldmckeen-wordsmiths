@@ -13,13 +13,19 @@ Date:               February 2023
 ===========================================================================================
 
 """
-
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
+from django.contrib.auth.models import Group
+from django.contrib.auth.models import User
 from rest_framework import permissions
-from apps.wordsmiths.models import WordType, Word, Sentence
-from apps.wordsmiths.serializers import UserSerializer, GroupSerializer, \
-    WordTypeSerializer, WordSerializer, SentenceSerializer
+from rest_framework import viewsets
+
+from apps.wordsmiths.models import Sentence
+from apps.wordsmiths.models import Word
+from apps.wordsmiths.models import WordType
+from apps.wordsmiths.serializers import GroupSerializer
+from apps.wordsmiths.serializers import SentenceSerializer
+from apps.wordsmiths.serializers import UserSerializer
+from apps.wordsmiths.serializers import WordSerializer
+from apps.wordsmiths.serializers import WordTypeSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):

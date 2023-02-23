@@ -13,11 +13,13 @@ Date:               February 2023
 ===========================================================================================
 
 """
-
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group
+from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from apps.wordsmiths.models import WordType, Word, Sentence
+from apps.wordsmiths.models import Sentence
+from apps.wordsmiths.models import Word
+from apps.wordsmiths.models import WordType
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     """Class to validate User Data."""
