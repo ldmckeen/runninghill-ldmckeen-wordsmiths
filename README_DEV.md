@@ -44,12 +44,18 @@ To run the application:<br>
 To create an admin super-user:<br>
 `python manage.py createsuperuser`
 
-### Setting up new instance of the API
+#### Setting up new instance of the API
 `django-admin startproject wordsmiths_api . `
 `cd tutorial`
 `django-admin startapp wordsmiths`
 `cd ..`
 
+
+#### Updating Django Models
+`python manage.py makemigrations`
+`python manage.py makemigrations --name <helpful-name>`
+
+After which run migrate command again.
 
 ## ======================================================
 ## ======================================================

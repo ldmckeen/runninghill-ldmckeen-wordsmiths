@@ -47,7 +47,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 LOCAL_APPS = [
-    'wordsmiths_api',
+    'apps.wordsmiths',
 ]
 
 INSTALLED_APPS = [
