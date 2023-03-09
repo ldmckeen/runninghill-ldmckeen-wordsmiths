@@ -1,0 +1,64 @@
+[
+  {
+    "model": "wordsmiths.sentence",
+    "pk": 1,
+    "fields": {
+      "text": "Hello there how do you do",
+      "created_by": 1,
+      "words": [
+        1,
+        3,
+        7,
+        4,
+        9,
+        4
+      ]
+    }
+  },
+  {
+    "model": "wordsmiths.sentence",
+    "pk": 2,
+    "fields": {
+      "text": "Hello Goodbye",
+      "created_by": 1,
+      "words": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "wordsmiths.sentence",
+    "pk": 3,
+    "fields": {
+      "text": "Downtown in Seattle",
+      "created_by": 1,
+      "words": [
+        5,
+        8,
+        6
+      ]
+    }
+  },
+  {
+    "model": "wordsmiths.sentence",
+    "pk": 4,
+    "fields": {
+      "text": "",
+      "created_by": 1,
+      "words": []
+    }
+  },
+  {
+    "model": "wordsmiths.sentence",
+    "pk": 5,
+    "fields": {
+      "text": "Goodbye you",
+      "created_by": 1,
+      "words": [
+        2,
+        9
+      ]
+    }
+  }
+]

@@ -21,6 +21,7 @@ from apps.wordsmiths.models import Sentence
 from apps.wordsmiths.models import Word
 from apps.wordsmiths.models import WordType
 
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     """Class to validate User Data."""
 
@@ -28,7 +29,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         """Nested Meta Class."""
 
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['url', 'id', 'username', 'email', 'groups']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -38,31 +39,49 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         """Nested Meta Class."""
 
         model = Group
-        fields = ['url', 'name']
+        fields = ['url', 'id', 'name']
 
 
 class WordTypeSerializer(serializers.HyperlinkedModelSerializer):
     """Class to validate Word Type Data."""
+    created_by = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(), many=False)
 
     class Meta:
         """Nested Meta Class."""
         model = WordType
-        fields = ['name', 'created_by']
-
-
-class WordSerializer(serializers.HyperlinkedModelSerializer):
-    """Class to validate Word Data."""
-
-    class Meta:
-        """Nested Meta Class."""
-        model = Word
-        fields = ['text', 'type', 'created_by']
+        fields = ['url', 'id', 'name', 'created_by']
 
 
 class SentenceSerializer(serializers.HyperlinkedModelSerializer):
     """Class to validate Sentence Data."""
+    words = serializers.PrimaryKeyRelatedField(
+        queryset=Word.objects.all(), many=True)
+    created_by = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(), many=False)
 
     class Meta:
         """Nested Meta Class."""
         model = Sentence
-        fields = ['text', 'created_by']
+        fields = ['url', 'id', 'words', 'text', 'created_by']
+        extra_kwargs = {
+            'text': {'read_only': True},
+            'words': {'required': False}
+        }
+
+
+class WordSerializer(serializers.HyperlinkedModelSerializer):
+    """Class to validate Word Data."""
+    sentences = SentenceSerializer(many=True, read_only=True)
+    type = serializers.PrimaryKeyRelatedField(
+        queryset=WordType.objects.all(), many=False)
+    created_by = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(), many=False)
+
+    class Meta:
+        """Nested Meta Class."""
+        model = Word
+        fields = ['url', 'id', 'name', 'type', 'created_by', 'sentences']
+        extra_kwargs = {
+            'sentences': {'required': False}
+        }

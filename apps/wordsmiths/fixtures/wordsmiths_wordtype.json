@@ -1,0 +1,74 @@
+[
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 1,
+    "fields": {
+      "name": "noun",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 2,
+    "fields": {
+      "name": "verb",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 3,
+    "fields": {
+      "name": "adjective",
+      "created_by": 1
+    }
+  },
+   {
+    "model": "wordsmiths.wordtype",
+    "pk": 4,
+    "fields": {
+      "name": "adverb",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 5,
+    "fields": {
+      "name": "pronoun",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 6,
+    "fields": {
+      "name": "preposition",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 7,
+    "fields": {
+      "name": "conjunction",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 8,
+    "fields": {
+      "name": "determiner",
+      "created_by": 1
+    }
+  },
+  {
+    "model": "wordsmiths.wordtype",
+    "pk": 9,
+    "fields": {
+      "name": "exclamation",
+      "created_by": 1
+    }
+  }
+]

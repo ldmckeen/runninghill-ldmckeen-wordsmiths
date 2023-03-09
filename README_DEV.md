@@ -55,6 +55,29 @@ To create an admin super-user:<br>
 `python manage.py makemigrations`
 `python manage.py makemigrations --name <helpful-name>`
 
+### Database and Fixtures
+Running Fixtures (To populate DB with default data)
+https://docs.djangoproject.com/en/3.1/ref/django-admin/
+https://riptutorial.com/django/example/17482/fixtures
+Dump model data from DB:
+`python manage.py dumpdata wordsmiths.<model-name> > <name of file to save to>`
+- eg. `python manage.py dumpdata wordsmiths.drugs > wordsmiths_wordtype.json`
+To Note: Remove `created` and `modified` timestamp fields from dumped data
+The fixtures will be divided into 3 types:
+- main-fixtures - Essential default data (The Apps will not work without these loaded)
+- test-fixtures - Data for unit testing
+- demo-fixtures - Data for local dev development with dummy data
+
+Load fixtures into DB:
+`python manage.py loaddata <fixture-file-name>`
+- eg. `python manage.py loaddata wordsmiths_wordtype.json` - Load fixtures into DB
+
+Current demo fixtures available - Run in sequence per app:
+`python manage.py loaddata wordsmiths_wordtype.json`
+`python manage.py loaddata wordsmiths_word.json`
+`python manage.py loaddata wordsmiths_sentence.json`
+
+
 After which run migrate command again.
 
 ## ======================================================
@@ -152,3 +175,13 @@ testing code resides in the tests folder
 This Application make use of the Pytest unit testing Library.<br>
 To run the unit tests you can use the single command:<br>
 `pytest` from the root directory of the repo.
+
+
+### Insomnia Collections
+See Resources folder for Insomnia Collections
+
+### Curl Commands
+
+`curl --request GET --url http://localhost:8000/users/ --header 'Authorization: Basic YWRtaW46cnVuX2hpbGwyMQ=='`
+
+`curl --request GET --url http://localhost:8000/word_type/ --header 'Authorization: Basic YWRtaW46cnVuX2hpbGwyMQ==' --header 'Content-Type: application/json'`

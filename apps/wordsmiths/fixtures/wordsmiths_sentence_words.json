@@ -1,0 +1,138 @@
+[
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 1,
+    "fields": {
+      "sentence": 1,
+      "word": 1
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 2,
+    "fields": {
+      "sentence": 1,
+      "word": 2
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 3,
+    "fields": {
+      "sentence": 1,
+      "word": 3
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 4,
+    "fields": {
+      "sentence": 2,
+      "word": 1
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 5,
+    "fields": {
+      "sentence": 2,
+      "word": 2
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 6,
+    "fields": {
+      "sentence": 2,
+      "word": 3
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 7,
+    "fields": {
+      "sentence": 7,
+      "word": 1
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 8,
+    "fields": {
+      "sentence": 7,
+      "word": 2
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 9,
+    "fields": {
+      "sentence": 7,
+      "word": 3
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 10,
+    "fields": {
+      "sentence": 3,
+      "word": 1
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 11,
+    "fields": {
+      "sentence": 3,
+      "word": 2
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 12,
+    "fields": {
+      "sentence": 3,
+      "word": 3
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 13,
+    "fields": {
+      "sentence": 3,
+      "word": 5
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 14,
+    "fields": {
+      "sentence": 3,
+      "word": 6
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 15,
+    "fields": {
+      "sentence": 3,
+      "word": 7
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 16,
+    "fields": {
+      "sentence": 3,
+      "word": 8
+    }
+  },
+  {
+    "model": "wordsmiths.sentence_words",
+    "pk": 17,
+    "fields": {
+      "sentence": 3,
+      "word": 4
+    }
+  }
+]

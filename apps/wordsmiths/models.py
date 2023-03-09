@@ -33,28 +33,34 @@ WORD_TYPE = [
 class WordType(TimeStampedModel):
     """Type of English word."""
 
-    name = models.CharField(choices=WORD_TYPE, max_length=11, default=None, blank=False)
+    name = models.CharField(choices=WORD_TYPE, max_length=11, default=None,
+                            blank=False, unique=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         """Provide human readable representation."""
-        return self.type
+        return self.name
 
 
 class Word(TimeStampedModel):
     """Word object consisting of text characters and type."""
 
-    text = models.CharField('English Word ', max_length=500)
+    name = models.CharField('English Word ', max_length=500, unique=True)
     type = models.ForeignKey(WordType, on_delete=models.CASCADE)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         """Provide human readable representation."""
-        return self.text
+        return self.name
 
 
 class Sentence(TimeStampedModel):
     """Sentence object comprised of words with type."""
 
+    words = models.ManyToManyField(Word, related_name='sentences', default=None)
     text = models.CharField('English Sentence ', max_length=5000)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        """Provide human readable representation."""
+        return self.text
